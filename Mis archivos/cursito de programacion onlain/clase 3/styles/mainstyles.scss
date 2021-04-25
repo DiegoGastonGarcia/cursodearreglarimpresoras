@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+$primary: #084C61;
+$secundary: #4F6D7A;
+$light: #C1DBE3;
+$dark: #0D0106;
+
+@mixin centerContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  max-height: 100%;
+}
+
+
+
+
+body {
+  width: 100vw;
+  max-width: 100%;
+  min-width: 100vw;
+  height: 100vh;
+  background: $light;
+  font-family: 'Lato', sans-serif;
+  header {
+    width: 60vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    .logo {
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 20px;
+      }
+
+
+    }
+
+    .nav-menu {
+      ul {
+        display: flex;
+        justify-content: flex-end;
+        list-style: none;
+        li {
+          margin: 0.5rem;
+          perspective: 100px;
+          button {
+            border: none;
+            background: rgba($color: $secundary,  $alpha: 0);
+            padding: 0.5rem 2rem;
+            font-weight: bold;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all ease 0.5s;
+            border-radius: 0.5rem;
+
+            &:hover {
+              color: $light;
+              background: $primary;
+              transform: translate3d(0px, 0, 10px);
+            }
+          }
+        }
+      }
+    }
+  }
+  main{
+    height: 100vh;
+    width: 60vw;
+    margin: 5rem auto 2rem auto;
+  }
+  footer {
+    background: rgba($color: $dark, $alpha: 0.5);
+    color: $light;
+    height: 15vh;
+    margin: 15rem 0 0 0;
+    padding: 0 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .links{
+      perspective: 100%;
+      i{
+        margin: 0 1rem;
+        transition: all ease .3s;
+        &:hover{
+          cursor: pointer;
+          color: $dark;
+        }
+
+      }
+    }
+  }
+
+
+
+.modal_container {
+        opacity: 0;
+        pointer-events: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba($color: $primary, $alpha: 0.7);
+        z-index: 1;
+        transition: opacity ease 0.3s;
+        @include centerContent;
+        &.show {
+          opacity: 1;
+          pointer-events: initial;
+        }
+    }
+
+
+}
+
+@import './cards';
+@import './modal';
