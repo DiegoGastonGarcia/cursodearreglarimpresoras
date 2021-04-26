@@ -15,7 +15,6 @@
     min-width: 100vw;
     min-height: 100%;
     background: #C1DBE3;
-    font-family: 'Lato', sans-serif;
   }
   body header {
     width: 60vw;
@@ -86,31 +85,94 @@
     row-gap: 2rem;
   }
   body footer {
-    background: rgba(13, 1, 6, 0.5);
-    color: #C1DBE3;
-    height: 15vh;
-    margin: 15rem 0 0 0;
-    padding: 0 5rem;
     display: none;
+  }
+  body .modal img {
+    width: 70%;
+    height: 500px;
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  body {
+    width: 100vw;
+    max-width: 100%;
+    min-width: 100vw;
+    min-height: 100%;
+    background: #C1DBE3;
+    font-family: 'Lato', sans-serif;
+  }
+  body header {
+    width: 60vw;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 0.5rem 0;
   }
-  body footer .links {
-    -webkit-perspective: 100%;
-            perspective: 100%;
+  body header .logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
   }
-  body footer .links i {
-    margin: 0 1rem;
-    -webkit-transition: all ease .3s;
-    transition: all ease .3s;
+  body header .nav-menu {
+    display: block;
   }
-  body footer .links i:hover {
+  body header .nav-menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    list-style: none;
+  }
+  body header .nav-menu ul li {
+    margin: 0.5rem;
+    -webkit-perspective: 100px;
+            perspective: 100px;
+  }
+  body header .nav-menu ul li button {
+    border: none;
+    background: rgba(79, 109, 122, 0);
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+    font-size: 12px;
     cursor: pointer;
-    color: #0D0106;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    border-radius: 0.5rem;
+  }
+  body header .nav-menu ul li button:hover {
+    color: #C1DBE3;
+    background: #084C61;
+    -webkit-transform: translate3d(0px, 0, 10px);
+            transform: translate3d(0px, 0, 10px);
+  }
+  body main {
+    width: 60vw;
+    margin: 5rem auto 2rem auto;
+  }
+  body main .cards_container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+    row-gap: 2rem;
+  }
+  body footer {
+    display: none;
+  }
+  body .modal img {
+    width: 450px;
   }
 }
 
@@ -190,33 +252,7 @@
     row-gap: 2rem;
   }
   body footer {
-    background: rgba(13, 1, 6, 0.5);
-    color: #C1DBE3;
-    height: 15vh;
-    margin: 15rem 0 0 0;
-    padding: 0 5rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  body footer .links {
-    -webkit-perspective: 100%;
-            perspective: 100%;
-  }
-  body footer .links i {
-    margin: 0 1rem;
-    -webkit-transition: all ease .3s;
-    transition: all ease .3s;
-  }
-  body footer .links i:hover {
-    cursor: pointer;
-    color: #0D0106;
+    display: none;
   }
 }
 
@@ -299,7 +335,6 @@
     background: rgba(13, 1, 6, 0.5);
     color: #C1DBE3;
     height: 15vh;
-    margin: 0rem 0 0 0;
     padding: 0 5rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -323,30 +358,6 @@
   body footer .links i:hover {
     cursor: pointer;
     color: #0D0106;
-  }
-  body .modal_container {
-    opacity: 0;
-    pointer-events: none;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: rgba(8, 76, 97, 0.7);
-    z-index: 1;
-    -webkit-transition: opacity ease 0.3s;
-    transition: opacity ease 0.3s;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  body .modal_container.show {
-    opacity: 1;
-    pointer-events: initial;
   }
 }
 
